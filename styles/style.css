@@ -2,4 +2,281 @@
 
 .page {
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
+  background-image: url(../images/cover-image-dark.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-color: var(--main-bg-color);
 }
+
+.header {
+  block-size: 100vh;
+  min-block-size: 668px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr min-content 1fr;
+  align-items: center;
+  position: relative;
+  font-family: var(--main-font), sans-serif;
+  font-size: var(--main-text-size);
+  padding: var(--main-gap);
+}
+
+/* REC */
+
+.header__decorative-text {
+  color: var(--accent-color);
+  text-transform: var(--headings-text-transform);
+  position: absolute;
+  inset-inline-end: 38px;
+  inset-block-start: var(--main-gap);
+}
+
+.header__decorative-text::after {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  width: 9px;
+  height: 9px;
+  margin-left: 10px;
+  margin-top: 8px;
+  border-radius: 50%;
+  background-color: var(--accent-color);
+  box-shadow: 0px 0px 4px 2px var(--accent-color);
+}
+
+.decorated-zone::before {
+  content: "";
+  position: absolute;
+  inline-size: 25px;
+  block-size: 25px;
+  border-block-start: 1px solid var(--accent-color);
+  border-inline-end: 1px solid var(--accent-color);
+  inset-inline-end: var(--main-gap);
+  inset-block-start: var(--main-gap);
+}
+
+.decorated-zone::after {
+  content: "";
+  position: absolute;
+  inline-size: 25px;
+  block-size: 25px;
+  border-inline-start: 1px solid var(--accent-color);
+  border-block-end: 1px solid var(--accent-color);
+  inset-inline-start: var(--main-gap);
+  inset-block-end: var(--main-gap);
+}
+
+/* Меню шапки */
+
+.header__theme-menu-list {
+  display: flex;
+  gap: var(--main-gap);
+  flex-direction: column;
+  justify-self: end;
+}
+
+.header__theme-menu-button {
+  min-block-size: 26px;
+  min-inline-size: 70px;
+  padding-inline: 2px 13px 4px;
+  text-align: center;
+  text-transform: var(--menu-text-transform);
+  background-color: transparent;
+  color: var(--accent-color);
+  border: 1px solid transparent;
+  cursor: pointer;
+  appearance: none;
+}
+
+/* Тайтл */
+
+.header__title {
+  color: var(--extra-color);
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  text-shadow: 4px 4px 0 var(--accent-color);
+  line-height: var(--title-line-height);
+  justify-self: center;
+}
+
+.title-decor {
+  background-color: var(--accent-color);
+  color: var(--title-color);
+  font-size: var(--main-text-size);
+  font-weight: var(--bold-font-weight);
+}
+
+/* Секции */
+
+.content {
+  display: grid;
+  gap: var(--big-gap);
+  background-color: var(--main-bg-color);
+  padding-block-start: var(--big-gap);
+}
+.content__section {
+  display: grid;
+  gap: var(--small-gap);
+  font-family: var(--main-font), sans-serif;
+  font-size: var(--main-text-size);
+  font-weight: var(--bold-font-weight);
+  padding: var(--main-gap);
+}
+
+.content__title {
+  color: var(--accent-color);
+  font-size: var(--main-text-size);
+}
+
+.content__text-block {
+  display: grid;
+  gap: var(--main-gap);
+}
+
+.content__paragraph {
+  color: var(--paragraph-color);
+  font-weight: var(--norm-font-weight);
+  line-height: 130%;
+}
+
+.letter__accent {
+  text-decoration: none;
+  text-shadow: 1px 1px 0 var(--accent-color);
+}
+
+.content__title-paragraph_accent {
+  font-weight: var(--norm-font-weight);
+}
+
+/* Галлерея */
+
+.gallery {
+  padding: var(--main-gap);
+}
+
+.images {
+  margin-block-start: var(--main-gap);
+  margin-block-end: var(--big-gap);
+  display: grid;
+  gap: var(--main-gap);
+}
+
+.gallery__image {
+  inline-size: 355px;
+}
+
+/* Футер */
+
+.footer {
+  block-size: 100vh;
+  min-block-size: 668px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  align-items: center;
+  position: relative;
+  font-family: var(--main-font), sans-serif;
+  font-size: var(--main-text-size);
+  padding: var(--main-gap);
+  background-color: var(--main-bg-color);
+}
+
+.footer__title {
+  color: var(--extra-color);
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  text-shadow: 2px 2px 0 var(--accent-color);
+  justify-self: center;
+  line-height: var(--title-line-height);
+}
+
+/* Планшет */
+@media (width >= 768px) {
+  .header {
+    padding: 20px 20px 20px 0;
+    min-block-size: 1024px;
+  }
+  .header__title {
+    justify-self: start;
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  }
+
+  .header__text {
+    justify-self: end;
+    max-width: 364px; /* сделать адаптивнее, исп calc */
+    inline-size: 50%;
+  }
+
+  .decorated-zone::before {
+    inset-inline-end: var(--small-gap);
+    inset-block-start: var(--small-gap);
+  }
+
+  .decorated-zone::after {
+    inset-inline-start: var(--small-gap);
+    inset-block-end: var(--small-gap);
+  }
+
+  .header__decorative-text {
+    inset-inline-end: 48px;
+    inset-block-start: var(--small-gap);
+  }
+
+  .content {
+    grid-template-rows: min-content 1fr 1fr;
+    padding-block-start: 40px;
+    gap: 40px;
+  }
+
+  .content__section {
+    padding: 20px;
+  }
+
+  .why__concentration-section,
+  .how__concentration-section {
+    grid-template-columns: 1fr minmax(min-content, 472px);
+  }
+
+  .why__concentration-section .content__text-block,
+  .how__concentration-section .content__text-block {
+    grid-column: 2;
+  }
+
+  .what__concentration-section {
+    grid-template-rows: min-content repeat(3, fit-content(141px));
+    /* max-height: 675px; */
+  }
+  .what__concentration-section .content__title {
+    max-inline-size: 236px;
+  }
+
+  .how__concentration-section .content__title-paragraph {
+    margin-block-end: 10px;
+  }
+}
+.gallery__item {
+  max-width: 728px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto auto auto;
+  gap: 20px;
+}
+.gallery__image {
+  display: block;
+  block-size: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.gallery__image:first-of-type {
+  grid-column: span 2;
+}
+.gallery__image:nth-of-type(2) {
+  grid-row: span 2;
+}
+.gallery__image:nth-of-type(3) {
+  grid-row: span 2;
+}
+.gallery__image:nth-of-type(5) {
+  grid-column: span 2;
+}
+
