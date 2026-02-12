@@ -346,11 +346,14 @@
 
   .what__concentration-section {
     grid-template-columns: 1fr 1fr 1fr;
-    flex-wrap: wrap;
+  }
+
+  .what__concentration-section .content__title {
+    grid-column: 1/-1;
+    max-width: 200px;
   }
 
   .what__concentration-section .content__text-block {
-    grid-row: 2;
     grid-template-rows: fit-content(23px);
   }
 
