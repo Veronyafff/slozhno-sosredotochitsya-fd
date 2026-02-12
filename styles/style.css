@@ -350,7 +350,6 @@
 
   .what__concentration-section .content__title {
     grid-column: 1/-1;
-    max-width: 200px;
   }
 
   .what__concentration-section .content__text-block {
