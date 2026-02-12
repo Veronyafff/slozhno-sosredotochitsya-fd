@@ -26,10 +26,6 @@
   display: none;
 }
 
-.why__concentration-section {
-  opacity: 1;
-}
-
 @media (prefers-color-scheme: light) {
   :root {
     --background-image: url(../images/cover-image-light.png);
@@ -38,6 +34,7 @@
     --accent-color: #ff8dcb;
     --nav-color: #353430;
     --nav-hover-color: rgba(50, 49, 45, 0.4);
+    --button-active-color: #353430;
     --title-color: #353430;
     --section-title-color: #353430;
     --header-logo-color: #ffc2e6;
@@ -46,9 +43,5 @@
 
   .header__decorative-text {
     display: none;
-  }
-
-  .why__concentration-section {
-    opacity: 1;
   }
 }

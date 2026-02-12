@@ -21,20 +21,6 @@
   --section-title-color: #ff0070;
   --header-logo-color: #db00ff;
   --footer-logo-color: #db00ff;
-
-  /* Шрифты, отступы */
-  --main-font: IBM Plex Mono;
-  --main-text-size: 18px;
-  --main-gap: 10px;
-  --small-gap: 20px;
-  --big-gap: 30px;
-  --large-gap: 82px;
-  --bold-font-weight: 700;
-  --norm-font-weight: 400;
-  --headings-text-transform: uppercase;
-  --menu-text-transform: lowercase;
-  --title-line-height: 82%;
-  --header-text-width: 49%;
 }
 
 .theme-dark .header__decorative-text {
