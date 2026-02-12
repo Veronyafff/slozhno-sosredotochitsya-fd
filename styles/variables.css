@@ -3,19 +3,39 @@
   и их переопределение под различные устройства
 */
 :root {
---main-bg-color: #000028;
---title-color: #000028;
---paragraph-color: #F1B2CE;
---accent-color: #FF0070;
---extra-color: #db00ff;
---main-font: IBM Plex Mono;
---main-text-size: 18px;
---main-gap: 10px;
---small-gap: 20px;
---big-gap: 30px;
---bold-font-weight: 700;
---norm-font-weight: 400;
---headings-text-transform: uppercase;
---menu-text-transform: lowercase;
---title-line-height: 82%;
+  /* Цвета */
+  --background-image: url(../images/cover-image-dark.png);
+  --main-bg-color: #000028;
+  --paragraph-color: #f1b2ce;
+  --accent-color: #ff0070;
+  --nav-color: #ff0070;
+  --nav-hover-color: rgba(255, 0, 112, 0.4);
+  --button-active-color: #ff0070;
+  --title-color: #000028;
+  --section-title-color: #ff0070;
+  --header-logo-color: #db00ff;
+  --header-logo-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  --footer-logo-color: #db00ff;
+  --footer-logo-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+
+  /* Шрифты, отступы */
+  --main-font: IBM Plex Mono;
+  --main-text-size: 18px;
+  --main-gap: 10px;
+  --small-gap: 20px;
+  --big-gap: 52px;
+  --large-gap: 82px;
+  --bold-font-weight: 700;
+  --norm-font-weight: 400;
+  --headings-text-transform: uppercase;
+  --menu-text-transform: lowercase;
+  --title-line-height: 82%;
+  --header-text-width: 49%;
+}
+
+@media (width >= 768px) {
+  :root {
+    --header-logo-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+    --footer-logo-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  }
 }
